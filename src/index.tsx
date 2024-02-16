@@ -21,7 +21,6 @@ export function getKatexContent({
   <html lang="en">
     <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width user-scalable=no" />
       <style>
         ${katexStyle}
         ${inlineStyle}
@@ -80,6 +79,8 @@ export default function Katex({
       source={{ html: getKatexContent(options) }}
       onLoad={onLoad}
       onError={onError}
+      setBuiltInZoomControls={false}
+      scrollEnabled={false}
       {...webviewProps}
     />
   );
