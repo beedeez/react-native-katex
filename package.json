@@ -1,38 +1,38 @@
 {
-  "name": "react-native-katex-v2",
-  "version": "0.4.0",
-  "description": "WebView bundled KaTeX",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "scripts": {
-    "clear": "rm -rf build src/katex-script.* src/katex-style.*",
-    "compile": "node scripts/prebuild.js",
-    "build": "yarn clear && yarn compile && tsc",
-    "release": "yarn build && npm version minor && npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GleidsonDaniel/react-native-katex.git"
-  },
-  "keywords": [],
-  "author": "Daniel Silva",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GleidsonDaniel/react-native-katex/issues"
-  },
-  "homepage": "https://github.com/GleidsonDaniel/react-native-katex#readme",
-  "dependencies": {
-    "react-native-webview": "11.26.1"
-  },
-  "peerDependencies": {
-    "react": ">=16",
-    "react-native": "*"
-  },
-  "devDependencies": {
-    "@types/katex": "^0.16.7",
-    "@types/react": "^18.0.9",
-    "@types/react-native": "^0.67.6",
-    "katex": "^0.16.9",
-    "typescript": "^4.6.4"
-  }
+	"name": "react-native-katex",
+	"version": "0.5.0",
+	"description": "WebView bundled KaTeX",
+	"main": "build/index.js",
+	"types": "build/index.d.ts",
+	"scripts": {
+		"clear": "rm -rf build src/katex-script.* src/katex-style.*",
+		"compile": "node scripts/prebuild.js",
+		"build": "yarn clear && yarn compile && tsc",
+		"release": "yarn build && npm version minor && npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/beedeez/react-native-katex.git"
+	},
+	"keywords": ["KaTeX", "React Native", "WebView", "Math", "TeX", "LaTeX"],
+	"author": "Beedeez",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/beedeez/react-native-katex/issues"
+	},
+	"homepage": "https://github.com/beedeez/react-native-katex#readme",
+	"dependencies": {
+		"react-native-webview": "11.23.1"
+	},
+	"peerDependencies": {
+		"react": ">=16",
+		"react-native": "*"
+	},
+	"devDependencies": {
+		"@types/katex": "^0.16.7",
+		"@types/react": "^18.0.9",
+		"@types/react-native": "^0.69",
+		"katex": "^0.16.10",
+		"typescript": "^4.6.4"
+	}
 }
