@@ -8,13 +8,21 @@
 		"clear": "rm -rf build src/katex-script.* src/katex-style.*",
 		"compile": "node scripts/prebuild.js",
 		"build": "yarn clear && yarn compile && tsc",
-		"release": "yarn build && npm version minor && npm publish"
+		"release": "yarn build && npm version minor && npm publish",
+		"prepare": "npm run build"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/beedeez/react-native-katex.git"
 	},
-	"keywords": ["KaTeX", "React Native", "WebView", "Math", "TeX", "LaTeX"],
+	"keywords": [
+		"KaTeX",
+		"React Native",
+		"WebView",
+		"Math",
+		"TeX",
+		"LaTeX"
+	],
 	"author": "Beedeez",
 	"license": "MIT",
 	"bugs": {
