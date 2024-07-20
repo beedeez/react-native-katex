@@ -35,13 +35,13 @@
 	},
 	"peerDependencies": {
 		"react": ">=16",
-		"react-native": "*",
-		"katex": "^0.16.11"
+		"react-native": "*"
 	},
 	"devDependencies": {
 		"@types/katex": "^0.16.7",
 		"@types/react": "^18.0.9",
 		"@types/react-native": "^0.69",
+		"katex": "^0.16.11",
 		"typescript": "^4.6.4"
 	}
 }
