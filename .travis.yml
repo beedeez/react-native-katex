@@ -7,6 +7,6 @@ notifications:
     on_success: never
     on_failure: always
 install:
-  - yarn
+  - pnpm@8.15.8
 script:
-  - yarn build
+  - pnpm build

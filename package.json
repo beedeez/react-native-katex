@@ -8,8 +8,8 @@
 	"scripts": {
 		"clear": "rm -rf build src/katex-script.* src/katex-style.*",
 		"compile": "node scripts/prebuild.js",
-		"build": "yarn clear && yarn compile && tsc",
-		"release": "yarn build && npm version minor && npm publish",
+		"build": "pnpm clear && pnpm compile && tsc",
+		"release": "pnpm build && npm version minor && npm publish",
 		"prepare": "npm run build"
 	},
 	"repository": {
