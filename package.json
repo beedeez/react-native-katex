@@ -9,8 +9,7 @@
 		"clear": "rm -rf build src/katex-script.* src/katex-style.*",
 		"compile": "node scripts/prebuild.js",
 		"build": "pnpm clear && pnpm compile && tsc",
-		"release": "pnpm build && npm version minor && npm publish",
-		"prepare": "npm run build"
+		"release": "pnpm build && npm version minor && npm publish"
 	},
 	"repository": {
 		"type": "git",
