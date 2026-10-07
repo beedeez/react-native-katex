@@ -49,18 +49,19 @@ body {
   display: flex;
 }
 `;
-function Katex({ style, onLoad, onError, webviewProps, ...options }) {
-    return (react_1.default.createElement(react_native_webview_1.WebView, { style: style, source: { html: getKatexContent(options) }, onLoad: onLoad, onError: onError, setBuiltInZoomControls: false, scrollEnabled: false, ...webviewProps }));
+function Katex({ style = defaultStyle.root, onLoad, onError, webviewProps, expression = "", displayMode = false, throwOnError = false, errorColor = "#f00", inlineStyle = defaultInlineStyle, macros = {}, colorIsTextColor = false, ...options }) {
+    return (react_1.default.createElement(react_native_webview_1.WebView, { style: style, source: {
+            html: getKatexContent({
+                expression,
+                displayMode,
+                throwOnError,
+                errorColor,
+                inlineStyle,
+                macros,
+                colorIsTextColor,
+                ...options,
+            }),
+        }, onLoad: onLoad, onError: onError, setBuiltInZoomControls: false, scrollEnabled: false, ...webviewProps }));
 }
 exports.default = Katex;
-Katex.defaultProps = {
-    expression: "",
-    displayMode: false,
-    throwOnError: false,
-    errorColor: "#f00",
-    inlineStyle: defaultInlineStyle,
-    style: defaultStyle,
-    macros: {},
-    colorIsTextColor: false,
-};
 //# sourceMappingURL=index.js.map
