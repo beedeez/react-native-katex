@@ -30,6 +30,7 @@
 	},
 	"homepage": "https://github.com/beedeez/react-native-katex#readme",
 	"dependencies": {
+		"@types/katex": "^0.16.7",
 		"react-native-webview": "11.23.1"
 	},
 	"peerDependencies": {
@@ -37,7 +38,6 @@
 		"react-native": "*"
 	},
 	"devDependencies": {
-		"@types/katex": "^0.16.7",
 		"@types/react": "^18.0.9",
 		"@types/react-native": "^0.69",
 		"katex": "^0.16.11",
