@@ -8,27 +8,10 @@ export interface ContentOptions extends KatexOptions {
 }
 export declare function getKatexContent({ inlineStyle, expression, ...options }: ContentOptions): string;
 export interface KatexProps extends ContentOptions {
-    style: StyleProp<ViewStyle>;
+    style?: StyleProp<ViewStyle>;
     onLoad?: WebViewProps["onLoad"];
     onError?: WebViewProps["onError"];
     webviewProps?: WebViewProps;
 }
-declare function Katex({ style, onLoad, onError, webviewProps, ...options }: KatexProps): React.JSX.Element;
-declare namespace Katex {
-    var defaultProps: {
-        expression: string;
-        displayMode: boolean;
-        throwOnError: boolean;
-        errorColor: string;
-        inlineStyle: string;
-        style: {
-            root: {
-                height: number;
-            };
-        };
-        macros: {};
-        colorIsTextColor: boolean;
-    };
-}
-export default Katex;
+export default function Katex({ style, onLoad, onError, webviewProps, expression, displayMode, throwOnError, errorColor, inlineStyle, macros, colorIsTextColor, ...options }: KatexProps): React.JSX.Element;
 export { KatexOptions, TrustContext };

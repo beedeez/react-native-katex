@@ -60,23 +60,41 @@ body {
 `;
 
 export interface KatexProps extends ContentOptions {
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
   onLoad?: WebViewProps["onLoad"];
   onError?: WebViewProps["onError"];
   webviewProps?: WebViewProps;
 }
 
 export default function Katex({
-  style,
+  style = defaultStyle.root,
   onLoad,
   onError,
   webviewProps,
+  expression = "",
+  displayMode = false,
+  throwOnError = false,
+  errorColor = "#f00",
+  inlineStyle = defaultInlineStyle,
+  macros = {},
+  colorIsTextColor = false,
   ...options
 }: KatexProps) {
   return (
     <WebView
       style={style}
-      source={{ html: getKatexContent(options) }}
+      source={{
+        html: getKatexContent({
+          expression,
+          displayMode,
+          throwOnError,
+          errorColor,
+          inlineStyle,
+          macros,
+          colorIsTextColor,
+          ...options,
+        }),
+      }}
       onLoad={onLoad}
       onError={onError}
       setBuiltInZoomControls={false}
@@ -85,16 +103,5 @@ export default function Katex({
     />
   );
 }
-
-Katex.defaultProps = {
-  expression: "",
-  displayMode: false,
-  throwOnError: false,
-  errorColor: "#f00",
-  inlineStyle: defaultInlineStyle,
-  style: defaultStyle,
-  macros: {},
-  colorIsTextColor: false,
-};
 
 export { KatexOptions, TrustContext };
